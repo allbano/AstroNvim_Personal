@@ -1,5 +1,3 @@
---if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 -- AstroCommunity: import any community modules here
 -- We import this file in `lazy_setup.lua` before the `plugins/` folder.
 -- This guarantees that the specs are processed before any user plugins.
@@ -10,5 +8,8 @@ return {
   { import = "astrocommunity.pack.lua" },
   -- import/override with your plugins folder
   -- heirline
-  { import = "astrocommunity.recipes.heirline-vscode-winbar" }, 
+  { import = "astrocommunity.recipes.heirline-vscode-winbar" },
+  -- Colorscheme - Tokyonight
+  { import = "astrocommunity.colorscheme.catppuccin" },
+  { import = "astrocommunity.colorscheme.tokyonight-nvim" },
 }
