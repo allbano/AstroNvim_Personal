@@ -9,7 +9,14 @@ return {
   -- import/override with your plugins folder
   -- heirline
   { import = "astrocommunity.recipes.heirline-vscode-winbar" },
-  -- Colorscheme - Tokyonight
-  { import = "astrocommunity.colorscheme.catppuccin" },
-  { import = "astrocommunity.colorscheme.tokyonight-nvim" },
+  -- Language Packs from AstroCommunity
+  { import = "astrocommunity.pack.rust" },
+  { import = "astrocommunity.pack.json" },
+  { import = "astrocommunity.pack.yaml" },
+  { import = "astrocommunity.pack.html-css" },
+  { import = "astrocommunity.pack.sql" },
+  { import = "astrocommunity.pack.toml" },
+  { import = "astrocommunity.pack.markdown" },
+  { import = "astrocommunity.pack.cpp" },
+  { import = "astrocommunity.pack.python" },
 }
