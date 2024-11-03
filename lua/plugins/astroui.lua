@@ -9,7 +9,8 @@ return {
   ---@type AstroUIOpts
   opts = {
     -- change colorscheme
-    colorscheme = "astrodark",
+    --colorscheme = "tokyonight",
+    colorscheme = "catpputin",
     -- AstroUI allows you to easily modify highlight groups easily for any and all colorschemes
     highlights = {
       init = { -- this table overrides highlights in all themes
@@ -32,6 +33,71 @@ return {
       LSPLoading8 = "⠧",
       LSPLoading9 = "⠇",
       LSPLoading10 = "⠏",
+      ActiveLSP = "",
+      ActiveTS = "",
+      ArrowLeft = "",
+      ArrowRight = "",
+      BufferClose = "󰅖",
+      DapBreakpoint = "",
+      DapBreakpointCondition = "",
+      DapBreakpointRejected = "",
+      DapLogPoint = ".>",
+      DapStopped = "󰁕",
+      DefaultFile = "󰈙",
+      Diagnostic = "󰒡",
+      DiagnosticError = "",
+      DiagnosticHint = "󰌵",
+      DiagnosticInfo = "󰋼",
+      DiagnosticWarn = "",
+      Ellipsis = "…",
+      FileModified = "",
+      FileReadOnly = "",
+      FoldClosed = "",
+      FoldOpened = "",
+      FoldSeparator = " ",
+      FolderClosed = "",
+      FolderEmpty = "",
+      FolderOpen = "",
+      Git = "󰊢",
+      GitAdd = "",
+      GitBranch = "",
+      GitChange = "",
+      GitConflict = "",
+      GitDelete = "",
+      GitIgnored = "◌",
+      GitRenamed = "➜",
+      GitStaged = "✓",
+      GitUnstaged = "✗",
+      GitUntracked = "★",
+      LSPLoaded = "",
+      --LSPLoading1 = "",
+      --LSPLoading2 = "󰀚",
+      --LSPLoading3 = "",
+      MacroRecording = "",
+      Paste = "󰅌",
+      Search = "",
+      Selected = "❯",
+      Spellcheck = "󰓆",
+      TabClose = "󰅙",
     },
+  },
+  {
+    "onsails/lspkind.nvim",
+    opts = function(_, opts)
+      -- use codicons preset
+      opts.preset = "codicons"
+      -- set some missing symbol types
+      opts.symbol_map = {
+        Array = "",
+        Boolean = "",
+        Key = "",
+        Namespace = "",
+        Null = "",
+        Number = "",
+        Object = "",
+        Package = "",
+        String = "",
+      }
+    end,
   },
 }
