@@ -12,6 +12,9 @@ return {
       "c",
       "cpp",
       "rust",
+      "html",
+      "javascript",
+      "typescript",
       -- add more arguments for adding more treesitter parsers
     },
   },
