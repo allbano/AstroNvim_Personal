@@ -37,7 +37,67 @@ return {
     },
     -- enable servers that you already have installed without mason
     servers = {
+      rust_analyzer = {
+        -- Aqui vão as configurações específicas para o rust_analyzer
+        settings = {
+          ["rust-analyzer"] = {
+            -- Esta é a parte mais importante para o Clippy:
+            checkOnSave = {
+              command = "clippy", -- Garanta que esta linha esteja presente e não comentada
+              -- extraArgs = { "--", "-Dwarnings" }, -- Opcional: Para tratar warnings como erros
+            },
+            -- outras configurações do rust-analyzer (inlay hints, etc.)
+            inlayHints = {
+              enable = true,
+              typeHints = true,
+              parameterHints = true,
+              bindingHints = true,
+              closureCaptureHints = true,
+              lifetimeElisionHints = true,
+              discriminantHints = true,
+            },
+          },
+        },
+      },
+      lua_ls = {
+        -- Opcional: Você pode personalizar configurações específicas do lua_ls aqui
+        settings = {
+          Lua = {
+            -- Estas são configurações comuns para o Lua Language Server
+            workspace = {
+              -- Diz ao lua_ls para pesquisar por arquivos em todo o diretório de trabalho
+              checkThirdParty = false,
+            },
+            completion = {
+              callSnippet = "Replace",
+            },
+            -- Linting (diagnósticos) já vêm habilitados por padrão com as configurações abaixo
+            diagnostics = {
+              globals = { "vim" }, -- Importante: Adicione "vim" para evitar avisos de globais não definidas
+              -- Você pode adicionar outras globais se usar frameworks específicos (e.g., "love")
+            },
+            telemetry = {
+              enable = false, -- Desabilita o envio de telemetria
+            },
+          },
+        },
+      },
       -- "pyright"
+      -- NOVA CONFIGURAÇÃO DO TAPLO (TOML) AQUI ↓
+      taplo = {
+        settings = {
+          evenBetterToml = {
+          -- Exemplo: Habilitar/Desabilitar formatação automática
+            formatter = {
+              enabled = true, -- Altere para "false" se não quiser formatação automática
+            },
+            -- Outras configurações do taplo (se necessário)
+            -- schema = {
+            --   catalogs = { "https://json.schemastore.org/" },
+            -- },
+          },
+        },
+      },
     },
     -- customize language server configuration options passed to `lspconfig`
     ---@diagnostic disable: missing-fields
