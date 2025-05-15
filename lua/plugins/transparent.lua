@@ -47,7 +47,10 @@ return {
         TSConstructor = { alpha = 0.8 }, -- Para construtores
         -- Adicione mais regras para outros grupos de destaque do Treesitter, se necessário
       },
-      exclude_groups = {},
+      exclude_groups = {
+        "CursorLine",
+        "CursorLineNr",
+      },
 
       on_clear = function() end,
     }
