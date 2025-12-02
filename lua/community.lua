@@ -10,7 +10,6 @@ return {
   -- heirline
   { import = "astrocommunity.recipes.heirline-vscode-winbar" },
   -- Language Packs from AstroCommunity
-  { import = "astrocommunity.pack.json" },
   { import = "astrocommunity.pack.yaml" },
   { import = "astrocommunity.pack.sql" },
   { import = "astrocommunity.pack.toml" },
